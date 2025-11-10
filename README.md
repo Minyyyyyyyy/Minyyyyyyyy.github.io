@@ -1,3 +1,6 @@
+```md
+{% raw %}
+```jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Check, RotateCcw, Dumbbell, Flame, Trophy, TrendingUp, Clock, 

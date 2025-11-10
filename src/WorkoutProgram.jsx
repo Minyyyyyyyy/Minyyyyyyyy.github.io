@@ -638,7 +638,7 @@ const WorkoutProgram = () => {
                           <Dumbbell className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           <span className="truncate">
                             {getWeight(exercise.name) ? (
-                              `${getWeight(exercise.name)} lbs`
+                              `${getWeight(exercise.name)} kg`
                             ) : (
                               <span className="text-slate-500">Add weight</span>
                             )}

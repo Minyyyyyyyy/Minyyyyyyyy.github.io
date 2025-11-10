@@ -14,10 +14,10 @@ const WorkoutProgram = () => {
       exercises: [
         { name: 'Smith Machine Squat', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Quads, Glutes', image: '/images/smith-machine-squat.gif' },
         { name: 'Bench Press', sets: 3, reps: '6-10', rest: '2-3 min', muscle: 'Chest, Triceps', image: '/images/bench-press.gif' },
-        { name: 'Incline Dumbbell Press', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Upper Chest, Shoulders', image: '/images/incline-dumbbell-press.gif' },
+        { name: 'Incline cable fly', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Upper Chest, Shoulders', image: '/images/incline-dumbbell-press.gif' },
         { name: 'Dumbbell Shoulder Press', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Shoulders', image: '/images/dumbbell-shoulder-press.gif' },
         { name: 'Cable Crossover', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Chest, Shoulders', image: '/images/cable-crossover.gif' },
-        { name: 'Dumbbell Lateral Raise', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Side Delts', image: '/images/dumbbell-lateral-raise.gif' },
+        { name: 'Cable Lateral Raise', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Side Delts', image: '/images/dumbbell-lateral-raise.gif' },
         { name: 'Cable Tricep Pushdown', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Triceps', image: '/images/cable-tricep-pushdown.gif' },
       ]
     },
@@ -30,9 +30,9 @@ const WorkoutProgram = () => {
         { name: 'Smith Machine RDL', sets: 3, reps: '8-10', rest: '2-3 min', muscle: 'Hamstrings, Glutes', image: '/images/smith-machine-rdl.gif' },
         { name: 'Cable Seated Row', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Back, Biceps', image: '/images/cable-seated-row.gif' },
         { name: 'Cable Lat Pullover', sets: 3, reps: '10-12', rest: '2 min', muscle: 'Lats, Serratus', image: '/images/cable-lat-pullover.gif' },
-        { name: 'Dumbbell Bicep Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps', image: '/images/dumbbell-bicep-curl.gif' },
+        { name: 'Dumbbell/Cable Bicep Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps', image: '/images/dumbbell-bicep-curl.gif' },
         { name: 'Cable Face Pulls', sets: 3, reps: '12-15', rest: '90 sec', muscle: 'Rear Delts', image: '/images/cable-face-pulls.gif' },
-        { name: 'Seated Calf Raise', sets: 3, reps: '15-20', rest: '90 sec', muscle: 'Calves', image: '/images/seated-calf-raise.gif' }
+        { name: 'Standing Calf Raise', sets: 3, reps: '15-20', rest: '90 sec', muscle: 'Calves', image: '/images/seated-calf-raise.gif' }
       ]
     },
     c: {
@@ -44,9 +44,9 @@ const WorkoutProgram = () => {
         { name: 'Dumbbell Goblet Squat', sets: 3, reps: '10-12', rest: '2 min', muscle: 'Quads, Glutes', image: '/images/dumbbell-goblet-squat.gif' },
         { name: 'Cable Chest Press', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Chest', image: '/images/cable-chest-press.gif' },
         { name: 'Single Arm Dumbbell Row', sets: 3, reps: '8-12/side', rest: '2 min', muscle: 'Lats, Back', image: '/images/single-arm-dumbbell-row.gif' },
-        { name: 'Cable Rope Overhead Extension', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Triceps', image: '/images/cable-rope-overhead-extension.gif' },
-        { name: 'Dumbbell Hammer Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps, Forearms', image: '/images/dumbbell-hammer-curl.gif' },
-        { name: 'Dumbbell Front Raise', sets: 2, reps: '10-12', rest: '90 sec', muscle: 'Front Delts', image: '/images/dumbbell-front-raise.gif' },
+        { name: 'Cable Overhead Extension', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Triceps', image: '/images/cable-rope-overhead-extension.gif' },
+        { name: 'Dumbbell/Cable Hammer Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps, Forearms', image: '/images/dumbbell-hammer-curl.gif' },
+        { name: 'Dumbbell/Cable Front Raise', sets: 2, reps: '10-12', rest: '90 sec', muscle: 'Front Delts', image: '/images/dumbbell-front-raise.gif' },
       ]
     }
   };

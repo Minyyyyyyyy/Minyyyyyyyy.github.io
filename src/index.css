@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ADD THIS CODE BELOW */
+
+@keyframes twinkle {
+  0% { background-position: 0 0; }
+  100% { background-position: -400px 400px; }
+}
+
+.animated-stars {
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+  animation: twinkle 20s linear infinite;
+}

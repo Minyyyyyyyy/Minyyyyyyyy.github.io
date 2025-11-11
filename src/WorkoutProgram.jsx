@@ -320,14 +320,11 @@ const WorkoutProgram = () => {
 
   // === Render ===
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      {/* Animated Background Pattern */}
-      <div className="fixed inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+    // (CHANGE 1 of 3): Added `overflow-hidden` to the main container
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      
+      {/* (CHANGE 2 of 3): Replaced old static background with new animated one */}
+      <div className="fixed inset-0 animated-stars z-0" />
 
       {/* Image Modal */}
       {showingImage && (
@@ -345,13 +342,11 @@ const WorkoutProgram = () => {
             >
               <X className="w-5 h-5" />
             </button>
-            {/* Note: In a real app, you'd have these images in your public folder */}
             <img 
               src={showingImage} 
               alt="Exercise illustration" 
               className="rounded-lg max-w-full max-h-[80vh] object-contain"
               onError={(e) => {
-                // Fallback for missing images
                 e.target.src = "https://via.placeholder.com/400x300.png?text=Image+Not+Found";
               }}
             />
@@ -359,7 +354,8 @@ const WorkoutProgram = () => {
         </div>
       )}
 
-      <div className="relative max-w-2xl mx-auto p-4 pb-32">
+      {/* (CHANGE 3 of 3): Added `relative` and `z-10` to put content on top of background */}
+      <div className="relative max-w-2xl mx-auto p-4 pb-32 z-10">
         {/* Warmup Screen */}
         {showWarmup && (
           <div className="mb-5 bg-gradient-to-br from-amber-600 to-orange-600 rounded-2xl p-5 shadow-2xl">
@@ -749,4 +745,5 @@ const WorkoutProgram = () => {
     </div>
   );
 };
+
 export default WorkoutProgram;

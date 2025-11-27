@@ -6,53 +6,54 @@ import {
 
 const WorkoutProgram = () => {
   const workouts = {
-    a: {
-      name: 'Workout A',
-      subtitle: 'Push Focus',
+    day1: {
+      name: 'Day 1',
+      subtitle: 'Chest, Shoulders, Biceps',
       color: 'from-blue-600 to-cyan-600',
       accent: 'blue',
       exercises: [
-        { name: 'Smith Machine Squat', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Quads, Glutes', image: '/images/smith-machine-squat.gif' },
-        { name: 'Bench Press', sets: 3, reps: '6-10', rest: '2-3 min', muscle: 'Chest, Triceps', image: '/images/bench-press.gif' },
-        { name: 'Incline cable fly', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Upper Chest, Shoulders', image: '/images/incline-dumbbell-press.gif' },
-        { name: 'Dumbbell Shoulder Press', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Shoulders', image: '/images/dumbbell-shoulder-press.gif' },
-        { name: 'Cable Crossover', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Chest, Shoulders', image: '/images/cable-crossover.gif' },
-        { name: 'Cable Lateral Raise', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Side Delts', image: '/images/dumbbell-lateral-raise.gif' },
-        { name: 'Cable Tricep Pushdown', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Triceps', image: '/images/cable-tricep-pushdown.gif' },
+        { name: 'Bench Press', sets: 3, reps: '6-10', rest: '2-3 min', muscle: 'Main chest mass builder', image: '/images/bench-press.gif' },
+        { name: 'Incline Dumbbell Bench Press', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Upper chest', image: '/images/incline-dumbbell-press.gif' },
+        { name: 'Dumbbell Shoulder Press', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Overall shoulder mass', image: '/images/dumbbell-shoulder-press.gif' },
+        { name: 'Cable Lateral Raise', sets: 3, reps: '12-15', rest: '90 sec', muscle: 'Side delts', image: '/images/cable-lateral-raise.gif' },
+        { name: 'Cable Rear Delt Fly', sets: 3, reps: '15-20', rest: '90 sec', muscle: 'Rear delts', image: '/images/cable-rear-delt-fly.gif' },
+        { name: 'Cable Bicep Curl', sets: 3, reps: '8-12', rest: '90 sec', muscle: 'Bicep mass', image: '/images/cable-bicep-curl.gif' },
+        { name: 'Dumbbell Hammer Curl', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Brachialis and long head', image: '/images/dumbbell-hammer-curl.gif' },
       ]
     },
-    b: {
-      name: 'Workout B',
-      subtitle: 'Pull Focus',
+    day2: {
+      name: 'Day 2',
+      subtitle: 'Back & Triceps',
       color: 'from-purple-600 to-pink-600',
       accent: 'purple',
       exercises: [
-        { name: 'Smith Machine RDL', sets: 3, reps: '8-10', rest: '2-3 min', muscle: 'Hamstrings, Glutes', image: '/images/smith-machine-rdl.gif' },
-        { name: 'Cable Seated Row', sets: 3, reps: '8-12', rest: '2 min', muscle: 'Back, Biceps', image: '/images/cable-seated-row.gif' },
-        { name: 'Cable Lat Pullover', sets: 3, reps: '10-12', rest: '2 min', muscle: 'Lats, Serratus', image: '/images/cable-lat-pullover.gif' },
-        { name: 'Dumbbell/Cable Bicep Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps', image: '/images/dumbbell-bicep-curl.gif' },
-        { name: 'Cable Face Pulls', sets: 3, reps: '12-15', rest: '90 sec', muscle: 'Rear Delts', image: '/images/cable-face-pulls.gif' },
-        { name: 'Standing Calf Raise', sets: 3, reps: '15-20', rest: '90 sec', muscle: 'Calves', image: '/images/seated-calf-raise.gif' }
+        { name: 'Cable Lat Pulldown (Wide Grip)', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Lat width', image: '/images/cable-lat-pulldown.gif' },
+        { name: 'Cable Seated Row', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Mid-back thickness', image: '/images/cable-seated-row.gif' },
+        { name: 'Cable Lat Pullover', sets: 3, reps: '10-12', rest: '2 min', muscle: 'Lower lats', image: '/images/cable-lat-pullover.gif' },
+        { name: 'Smith Machine Shrugs', sets: 2, reps: '12-15', rest: '90 sec', muscle: 'Upper traps', image: '/images/smith-machine-shrugs.gif' },
+        { name: 'Cable Tricep Pushdown', sets: 3, reps: '10-15', rest: '90 sec', muscle: 'Lateral head', image: '/images/cable-tricep-pushdown.gif' },
+        { name: 'Overhead Cable Tricep Extension', sets: 3, reps: '12-15', rest: '90 sec', muscle: 'Long head', image: '/images/cable-rope-overhead-extension.gif' },
       ]
     },
-    c: {
-      name: 'Workout C',
-      subtitle: 'Full Body Mix',
+    day3: {
+      name: 'Day 3',
+      subtitle: 'Legs & Abs',
       color: 'from-orange-600 to-red-600',
       accent: 'orange',
       exercises: [
-        { name: 'Dumbbell Goblet Squat', sets: 3, reps: '10-12', rest: '2 min', muscle: 'Quads, Glutes', image: '/images/dumbbell-goblet-squat.gif' },
-        { name: 'Cable Chest Press', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Chest', image: '/images/cable-chest-press.gif' },
-        { name: 'Single Arm Dumbbell Row', sets: 3, reps: '8-12/side', rest: '2 min', muscle: 'Lats, Back', image: '/images/single-arm-dumbbell-row.gif' },
-        { name: 'Cable Overhead Extension', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Triceps', image: '/images/cable-rope-overhead-extension.gif' },
-        { name: 'Dumbbell/Cable Hammer Curl', sets: 3, reps: '10-12', rest: '90 sec', muscle: 'Biceps, Forearms', image: '/images/dumbbell-hammer-curl.gif' },
-        { name: 'Dumbbell/Cable Front Raise', sets: 2, reps: '10-12', rest: '90 sec', muscle: 'Front Delts', image: '/images/dumbbell-front-raise.gif' },
+        { name: 'Smith Machine Squat', sets: 3, reps: '6-10', rest: '2-3 min', muscle: 'Quads and glutes', image: '/images/smith-machine-squat.gif' },
+        { name: 'Smith Machine RDL', sets: 3, reps: '8-12', rest: '2-3 min', muscle: 'Hamstrings and glutes', image: '/images/smith-machine-rdl.gif' },
+        { name: 'Dumbbell Bulgarian Split Squat', sets: 2, reps: '10-12/side', rest: '2 min', muscle: 'Unilateral leg work', image: '/images/bulgarian-split-squat.gif' },
+        { name: 'Dumbbell Stiff-Leg Deadlift', sets: 2, reps: '10-12', rest: '2 min', muscle: 'Hamstring stretch', image: '/images/dumbbell-stiff-leg-deadlift.gif' },
+        { name: 'Smith Machine Calf Raise', sets: 3, reps: '12-15', rest: '90 sec', muscle: 'Calves', image: '/images/smith-calf-raise.gif' },
+        { name: 'Cable Ab Crunch', sets: 3, reps: '15-20', rest: '90 sec', muscle: 'Upper abs', image: '/images/cable-crunch.gif' },
+        { name: 'Hanging Leg Raises', sets: 2, reps: '12-15', rest: '90 sec', muscle: 'Lower abs', image: '/images/hanging-leg-raise.gif' }
       ]
     }
   };
 
   // State
-  const [selectedWorkout, setSelectedWorkout] = useState('a');
+  const [selectedWorkout, setSelectedWorkout] = useState('day1');
   const [completedSets, setCompletedSets] = useState({});
   const [weights, setWeights] = useState({});
   
@@ -320,10 +321,8 @@ const WorkoutProgram = () => {
 
   // === Render ===
   return (
-    // (CHANGE 1 of 3): Added `overflow-hidden` to the main container
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       
-      {/* (CHANGE 2 of 3): Replaced old static background with new animated one */}
       <div className="fixed inset-0 animated-stars z-0" />
 
       {/* Image Modal */}
@@ -334,7 +333,7 @@ const WorkoutProgram = () => {
         >
           <div 
             className="relative bg-slate-800 p-4 rounded-2xl shadow-2xl"
-            onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
+            onClick={(e) => e.stopPropagation()}
           >
             <button 
               onClick={() => setShowingImage(null)}
@@ -354,12 +353,10 @@ const WorkoutProgram = () => {
         </div>
       )}
 
-      {/* (CHANGE 3 of 3): Added `relative` and `z-10` to put content on top of background */}
       <div className="relative max-w-2xl mx-auto p-4 pb-32 z-10">
         {/* Warmup Screen */}
         {showWarmup && (
           <div className="mb-5 bg-gradient-to-br from-amber-600 to-orange-600 rounded-2xl p-5 shadow-2xl">
-            {/* ... (Warmup UI - No changes needed) ... */}
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-xl flex-shrink-0">
                 <Flame className="w-6 h-6" />
@@ -424,7 +421,6 @@ const WorkoutProgram = () => {
         {restTime > 0 && (
           <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-cyan-600 to-blue-600 shadow-2xl z-40 safe-area-bottom">
             <div className="max-w-2xl mx-auto p-4">
-              {/* ... (Rest Timer UI - No changes needed) ... */}
               <div className="flex items-center justify-between mb-3 gap-3">
                 <div className="flex items-center gap-2 min-w-0 flex-1">
                   <Clock className="w-5 h-5 flex-shrink-0" />
@@ -446,7 +442,7 @@ const WorkoutProgram = () => {
               <div className="flex gap-2">
                 <button
                   onClick={toggleRest}
-                  className="flex-1 bg-white/20 hover:bg-white/30 active:bg-white/40 active:scale-9s5 backdrop-blur-sm py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-2 touch-manipulation"
+                  className="flex-1 bg-white/20 hover:bg-white/30 active:bg-white/40 active:scale-95 backdrop-blur-sm py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-2 touch-manipulation"
                 >
                   {isRestRunning ? (
                     <>
@@ -474,20 +470,19 @@ const WorkoutProgram = () => {
 
         {/* Header with Gradient */}
         <div className={`bg-gradient-to-r ${currentWorkout.color} rounded-2xl p-5 mb-5 shadow-2xl`}>
-          {/* ... (Header UI - No changes needed) ... */}
           <div className="flex items-center justify-between mb-4 gap-3">
             <div className="flex items-center gap-3 min-w-0 flex-1">
               <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-xl flex-shrink-0">
                 <Dumbbell className="w-6 h-6" />
               </div>
               <div className="min-w-0">
-                <h1 className="text-xl sm:text-2xl font-bold tracking-tight truncate">Compound Lift Program</h1>
-                <p className="text-white/80 text-xs font-medium truncate">Build strength efficiently</p>
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight truncate">3-Day Push/Pull/Legs Split</h1>
+                <p className="text-white/80 text-xs font-medium truncate">Balanced muscle development</p>
               </div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-xl flex-shrink-0">
               <div className="text-xs text-white/80 font-medium whitespace-nowrap">Frequency</div>
-              <div className="text-base font-bold whitespace-nowrap">2-3x/week</div>
+              <div className="text-base font-bold whitespace-nowrap">3x/week</div>
             </div>
           </div>
           {/* Progress Section */}
@@ -519,9 +514,8 @@ const WorkoutProgram = () => {
           </div>
         </div>
 
-        {/* Workout Selector */}
+        {/* Workout Selector - Updated for 3 workouts */}
         <div className="grid grid-cols-3 gap-2.5 mb-5">
-          {/* ... (Selector UI - No changes needed) ... */}
           {Object.entries(workouts).map(([key, workout]) => {
             const isActive = selectedWorkout === key;
             return (
@@ -535,8 +529,8 @@ const WorkoutProgram = () => {
                 }`}
                 style={isActive ? {
                   background: `linear-gradient(135deg, ${
-                    key === 'a' ? 'rgb(37, 99, 235), rgb(8, 145, 178)' :
-                    key === 'b' ? 'rgb(147, 51, 234), rgb(219, 39, 119)' :
+                    key === 'day1' ? 'rgb(37, 99, 235), rgb(8, 145, 178)' :
+                    key === 'day2' ? 'rgb(147, 51, 234), rgb(219, 39, 119)' :
                     'rgb(234, 88, 12), rgb(220, 38, 38)'
                   })`
                 } : {}}
@@ -576,7 +570,7 @@ const WorkoutProgram = () => {
                     : 'border-slate-700/50'
                 }`}
               >
-                {/* Exercise Header - MODIFIED */}
+                {/* Exercise Header */}
                 <div className="flex items-start justify-between mb-4 gap-3">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
@@ -598,7 +592,6 @@ const WorkoutProgram = () => {
                     
                     {/* Weight Tracker */}
                     <div className="mt-2">
-                      {/* ... (Weight Tracker UI - No changes needed) ... */}
                       {editingWeight === exercise.name ? (
                         <div className="flex items-center gap-2">
                           <input
@@ -654,7 +647,6 @@ const WorkoutProgram = () => {
 
                 {/* Exercise Details */}
                 <div className="flex gap-2 mb-4 text-sm">
-                  {/* ... (Exercise Details UI - No changes needed) ... */}
                   <div className="bg-slate-900/50 rounded-lg px-3 py-2 flex-1 min-w-0">
                     <div className="text-slate-400 text-xs mb-1">Reps</div>
                     <div className="font-bold text-white truncate">{exercise.reps}</div>
@@ -667,7 +659,6 @@ const WorkoutProgram = () => {
 
                 {/* Set Buttons */}
                 <div className="grid grid-cols-3 gap-2">
-                  {/* ... (Set Buttons UI - No changes needed) ... */}
                   {[...Array(exercise.sets)].map((_, setIndex) => {
                     const setNumber = setIndex + 1;
                     const completed = isSetCompleted(exerciseIndex, setNumber);
@@ -698,7 +689,7 @@ const WorkoutProgram = () => {
           })}
         </div>
 
-        {/* Reset Button - MODIFIED */}
+        {/* Reset Button */}
         <button
           onClick={resetWorkout}
           className="w-full bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 active:from-slate-500 active:to-slate-400 active:scale-95 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-lg touch-manipulation mb-5"
@@ -709,7 +700,6 @@ const WorkoutProgram = () => {
 
         {/* Program Info Card */}
         <div className="bg-gradient-to-br from-slate-800/80 to-slate-800/40 backdrop-blur-sm rounded-2xl p-5 shadow-xl border border-slate-700/50">
-          {/* ... (Program Info UI - No changes needed) ... */}
           <div className="flex items-center gap-2 mb-4">
             <TrendingUp className="w-6 h-6 text-cyan-400 flex-shrink-0" />
             <h3 className="font-bold text-base sm:text-lg">Program Guidelines</h3>
@@ -718,30 +708,61 @@ const WorkoutProgram = () => {
             <div className="flex items-start gap-3 bg-slate-900/30 rounded-lg p-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0" />
               <div className="min-w-0">
-                <span className="font-semibold text-white">Training Frequency:</span> 2-3 sessions per week (Mon/Thu or Mon/Wed/Fri)
+                <span className="font-semibold text-white">Training Schedule:</span> 3 sessions per week (Mon/Wed/Fri or similar with rest days between)
               </div>
             </div>
             <div className="flex items-start gap-3 bg-slate-900/30 rounded-lg p-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0" />
               <div className="min-w-0">
-                <span className="font-semibold text-white">Workout Rotation:</span> Cycle through A → B → C → A → B...
+                <span className="font-semibold text-white">Workout Rotation:</span> Chest/Shoulders/Biceps → Back/Triceps → Legs/Abs
               </div>
             </div>
             <div className="flex items-start gap-3 bg-slate-900/30 rounded-lg p-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0" />
               <div className="min-w-0">
-                <span className="font-semibold text-white">Progressive Overload:</span> Increase weight or reps each week
+                <span className="font-semibold text-white">Weekly Volume:</span> Chest: 6 sets | Shoulders: 9 sets | Biceps: 6 sets | Back: 11 sets | Triceps: 6 sets | Legs: 24 sets | Abs: 5 sets
               </div>
             </div>
             <div className="flex items-start gap-3 bg-slate-900/30 rounded-lg p-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0" />
               <div className="min-w-0">
-                <span className="font-semibold text-white">Recovery:</span> Rest 48-72 hours between training sessions
+                <span className="font-semibold text-white">Progressive Overload:</span> Increase weight or reps when you can complete all sets with good form
+              </div>
+            </div>
+            <div className="flex items-start gap-3 bg-slate-900/30 rounded-lg p-3">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full mt-1.5 flex-shrink-0" />
+              <div className="min-w-0">
+                <span className="font-semibold text-white">Best For:</span> Balanced muscle development with dedicated focus days for each major muscle group
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .animated-stars {
+          background: 
+            radial-gradient(2px 2px at 20% 30%, white, transparent),
+            radial-gradient(2px 2px at 60% 70%, white, transparent),
+            radial-gradient(1px 1px at 50% 50%, white, transparent),
+            radial-gradient(1px 1px at 80% 10%, white, transparent),
+            radial-gradient(2px 2px at 90% 60%, white, transparent),
+            radial-gradient(1px 1px at 33% 80%, white, transparent),
+            radial-gradient(1px 1px at 15% 90%, white, transparent);
+          background-size: 200% 200%;
+          animation: stars 20s ease-in-out infinite;
+          opacity: 0.4;
+        }
+        
+        @keyframes stars {
+          0%, 100% { background-position: 0% 0%; }
+          50% { background-position: 100% 100%; }
+        }
+        
+        .safe-area-bottom {
+          padding-bottom: env(safe-area-inset-bottom);
+        }
+      `}</style>
     </div>
   );
 };
